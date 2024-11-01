@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <link rel="stylesheet" href="estilo.css">  
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaUM7hmqN-qtkoh4xNVcuZkT7mwzvAQJCpRg&s">
+</head>
+<body>
+    
+    <h1>Introdução ao JQuery</h1>
+    <p>jQuery é uma biblioteca JavaScript rápida, leve e rica em recursos, projetada para simplificar tarefas comuns de desenvolvimento web. Com jQuery, você pode manipular o DOM, controlar eventos, criar animações e facilitar a comunicação AJAX em suas páginas web.</p>
+    <br><br>
+    <hr>
+
+    <h1>Interagindo com botões</h1>
+    <button id="btn1"> Botão 1</button>
+    <button id="btn2"> Botão 2</button>
+    <button id="btn3"> Botão 3</button>
+    <br><br>
+    <hr>
+    
+    <h1>Mostrar ou esconder objetos</h1>
+    <button id="btnEsconder"> Esconder div 1</button>
+    <button id="btnMostrar"> Mostrar div 1</button>
+    <button id="btnAlternar"> Esconder/Mostrar imagem</button>
+    <br><br>
+    <img id="carregando" src="carregando.gif" height="70">
+    <div id="divUm"> DIV 1</div> 
+    <br><br>
+    <hr>
+
+    <h1>Mudar alguma propriedade CSS</h1>
+    <button id="btnAlterarEstilo">Alterar CSS</button>
+    <div id="divDois"> DIV 2</div>
+    <br><br>
+    <hr>
+
+    <h1>Alterar o conteudo html</h1>
+    <button id="btnMudarHtml">Mudar conteúdo</button>
+    <div id="divTres" class="caixas"> DIV 3</div>
+    <br><br>
+    <hr>
+
+    <h1>Capturar o texto de algum elemento</h1>
+    <button id="btnCapturar">Obter texto</button>
+    <div id="divQuatro" class="caixas"> Estou aqui</div>
+    <div id="divCinco" class="caixas"> Eu também</div>
+    <div id="divSeis" class="caixas"> Não falei nada</div>
+    <br><br>
+    <hr>
+
+    <h1>Obter dados de campos de formulário</h1>
+    <div style="display: flex;">
+        <div>
+            <label>Nome: </label>
+            <input type="text" id="caixa_nome"><br><br>
+        
+            <label>Data de nascimento: </label>
+            <input type="date" id="caixa_data"> <br><br>
+        
+            <label>Cargo: </label>
+            <select id="caixa_cargo">
+                <option value="">Selecione</option>
+                <option value="Gestor de TI">Gestor de TI</option>
+                <option value="Des. Frontend">Des. Frontend</option>
+                <option value="Des. Backend">Des. Backend</option>
+                <option value="Des. FullStack">Des. FullStack</option>
+            </select>
+        </div>
+        <div style="text-align: center; width: 700px;">
+            <button id="btnObterDados">Obter dados</button>
+            <br><br>
+            <div id="conteudo1">Mostre os dados aqui...</div>
+        </div>
+    </div>
+
+    <br><br>
+    <hr>
+
+    <h1>Colocar dados em campos de formulário</h1>
+    <div style="display: flex;">
+        <div>
+            <label>Nome: </label>
+            <input type="text" id="caixa_nome2"><br><br>
+        
+            <label>Data de nascimento: </label>
+            <input type="date" id="caixa_data2"> <br><br>
+        
+            <label>Cargo: </label>
+            <select id="caixa_cargo2">
+                <option value="">Selecione</option>
+                <option value="Gestor de TI">Gestor de TI</option>
+                <option value="Des. Frontend">Des. Frontend</option>
+                <option value="Des. Backend">Des. Backend</option>
+                <option value="Des. FullStack">Des. FullStack</option>
+            </select>
+        </div>
+        <div style="text-align: center; width: 700px;">
+            <button id="btnObterDados2">Obter dados</button>
+            <br><br>
+            <div id="conteudo2">Mostre os dados aqui...</div>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+
+    <h1>Usando $(this) e find()</h1>
+    <div style="display: flex; justify-content: space-around;">
+        <div class="cartoes">
+            <span class="nome_produto">Feijão</span> <br>
+            R$ <span class="preco_produto">8,99</span><br><br>
+            <button>Editar</button>
+        </div>
+        <div class="cartoes">
+            <span class="nome_produto">Arroz</span> <br>
+            R$ <span class="preco_produto">6,89</span><br><br>
+            <button>Editar</button>
+        </div>
+        <div class="cartoes">
+            <span class="nome_produto">Coxão mole(kg)</span> <br>
+            R$ <span class="preco_produto">41,99</span><br><br>
+            <button>Editar</button>
+        </div>
+        <div class="cartoes">
+            <span class="nome_produto">Flocao de Milho</span> <br>
+            R$ <span class="preco_produto">2,39</span><br><br>
+            <button>Editar</button>
+        </div>
+        <div class="cartoes">
+            <span class="nome_produto">Bandeja c/ 30 ovos</span> <br>
+            R$ <span class="preco_produto">16,99</span><br><br>
+            <button>Editar</button>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+
+    <h1>Carregar conteúdo de uma página dentro de uma div</h1>
+    <div id="conteudo3" style="border: 1px solid red;height: 200px;">
+        Carregue aqui...
+    </div>
+    <br><br>
+    <hr>
+
+    <h1>Cadastrando dados com AJAX</h1>
+    <div style="display: flex;">
+        <div>
+            <label>Nome: </label>
+            <input type="text" id="caixa_nome3"><br><br>
+        
+            <label>Data de nascimento: </label>
+            <input type="date" id="caixa_data3"> <br><br>
+        
+            <label>Cargo: </label>
+            <select id="caixa_cargo3">
+                <option value="">Selecione</option>
+                <option value="Gestor de TI">Gestor de TI</option>
+                <option value="Des. Frontend">Des. Frontend</option>
+                <option value="Des. Backend">Des. Backend</option>
+                <option value="Des. FullStack">Des. FullStack</option>
+            </select><br><br>
+            <button id="btnCadastrar">Cadastrar</button>
+        </div>
+        <div style=" width: 700px;">
+            <div id="conteudo4" style="border: 1px solid gray; margin-left: 100px; min-height: 100px;">
+                Mostre os dados aqui...
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+
+
+
+
+
+    <h1>Editar/Deletar com AJAX</h1>
+    <div id="conteudo5">
+        <img src="./carregando.gif" height="60">
+    </div>
+
+    <br><br>
+    <hr>
+
+
+    <div id="escurecer">
+        <img src="./carregando.gif" id="imgCarregando" height="60">
+        <div id="formulario">
+            <button id="btnFechar">X</button>
+            <h1>Editar/Deletar</h1>
+            <br><br>
+            ID: <input type="text" id="id_pessoa" disabled><br> <br>
+            Nome: <input type="text" id="nome_pessoa"><br> <br>
+            Data de nascimento: <input type="date" id="data_pessoa"><br> <br>
+            Cargo ocupado: <input type="text" id="cargo_pessoa"><br> <br>
+            <button id="btnAtualizar">Salvar Alterações</button>
+            <button id="btnDeletar">Apagar</button>
+
+        </div>
+    </div>
+
+
+
+    <script >
+
+
+        $("#btnAtualizar").click(function(){
+            var id_escolhido = $("#id_pessoa").val();
+            var nome_escolhido = $("#nome_pessoa").val();
+            var data_escolhido = $("#data_pessoa").val();
+            var cargo_escolhido = $("#cargo_pessoa").val();
+
+            $("#formulario").hide();
+            $("#imgCarregando").show();
+            $.ajax({
+                url: "atualizar.php",
+                method: "POST",
+                data: {id: id_escolhido,
+                        nome: nome_escolhido,
+                        data: data_escolhido,
+                        cargo: cargo_escolhido},
+                success: function(resposta){
+                    alert(resposta);
+                    $("#escurecer").hide();
+                    $("#conteudo5").load("consultar2.php");
+                },
+                error: function(){
+                    alert("Não foi possível atualizar");
+                }
+                
+            });
+            
+        });
+
+
+
+        //Quando a página estiver pronta
+
+        $(document).on("click", ".cartao_pessoa", function(){
+            $("#escurecer").show();
+            $("#formulario").show();
+            $("#imgCarregando").hide();
+
+
+            var id = $(this).find(".codigo").text();
+            var nome = $(this).find(".nome").text();
+            var data = $(this).find(".data_nasc").text();
+            var cargo = $(this).find(".cargo").text();
+
+            $("#id_pessoa").val(id);
+            $("#nome_pessoa").val(nome);
+            $("#data_pessoa").val(data);
+            $("#cargo_pessoa").val(cargo);
+
+        });
+
+        $("#btnDeletar").click(function(){
+            if(confirm("Tem certeza que deseja apagar ?")){
+                var id_escolhido = $("#id_pessoa").val();
+                $("#formulario").hide();
+                $("#imgCarregando").show();
+                $.ajax({
+                    url: "deletar.php",
+                    method: "POST",
+                    data: {id: id_escolhido},
+                    success: function(resposta){
+                        alert(resposta);
+                        $("#escurecer").hide();
+                        $("#conteudo5").load("consultar2.php");
+                    },
+                    error: function(){
+                        alert("Deu erro ao enviar dados");
+                    }
+                });
+
+
+            }else{
+
+            }// Final do iff
+        });// Final do click deletar
+
+        $("#btnFechar").click(function(){
+            $("#escurecer").hide();
+        });
+
+        $(document).ready(function(){
+            $("#imgCarregando").hide();
+            $("#escurecer").hide();
+
+
+            $('#conteudo5').load("consultar2.php");
+
+            $("#btn1").click(function(){
+                alert("Botão 1");
+            });
+            $("#btn2").dblclick(function(){
+                alert("Botão 2 clicado 2x");
+            });
+            $("#btn3").hover(function(){
+                alert("Passou o mouse no botão 3");
+            });
+
+            $("#btnEsconder").click(function(){
+                // Esconder a divUm
+                $("#divUm").hide();
+            });
+            $("#btnMostrar").click(function(){
+                // Mostrar a divUm
+                $("#divUm").show();
+            });
+            $("#btnAlternar").click(function(){
+                // Alternar a Imagem de Loading...
+                $("#carregando").toggle();
+            });
+
+            $("#btnAlterarEstilo").click(function(){
+                $("#divDois").css({"width":  "500px", "height":  "300px"} );
+            });
+            
+            $("#btnMudarHtml").click(function(){
+                $("#divTres").html("<h1>Mudou</h1>");
+            });
+
+            $("#btnCapturar").click(function(){
+                var texto1, texto2, texto3;
+                texto1 = $("#divQuatro").text();
+                texto2 = $("#divCinco").text();
+                texto3 = $("#divSeis").text();
+
+                alert(texto1 + texto2 + texto3);
+            });
+
+            $("#btnObterDados").click(function(){
+                var nome = $("#caixa_nome").val();
+                var data = $("#caixa_data").val();
+                var cargo = $("#caixa_cargo").val();
+
+                $("#conteudo1").html("<h1>" +nome+ "</h1>");
+                $("#conteudo1").append("<h1>"+data+"</h1>");
+                $("#conteudo1").append("<h1>"+cargo+"</h1>");
+
+                $("#caixa_nome").val("");
+                $("#caixa_data").val("");
+                $("#caixa_cargo").val("");
+
+            });
+
+
+            $("#btnObterDados2").click(function(){
+                $("#caixa_nome2").val("Gabriel das Meninas")
+                $("#caixa_data2").val("2000-03-25")
+                $("#caixa_cargo2").val("Gestor de TI")
+
+                $("#conteudo2").html("<h1>Inserido! <img src='https://veja.abril.com.br/wp-content/uploads/2016/11/kid-bengala.jpeg?crop=1&resize=1212,909'></h1>")
+            });
+
+            $(".cartoes").click(function(){
+                var nome = $(this).find(".nome_produto").text();
+                var preco = $(this).find(".preco_produto").text();
+
+                alert("O nome do produto é: " + nome);
+                alert("O preco do produto é: " + preco);
+
+            });
+
+            // Carregar dados de uma página dentro de uma div
+            $("#conteudo3").load("dados.php");
+
+            // Exibir os dados das pessoas
+            $("#conteudo4").load("consultar.php");
+
+
+            // Cadastrar  usando AJAX
+            $("#btnCadastrar").click(function(){
+                $("#conteudo4").html("<img src='https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif' height='60'>")
+                var nome_capturado = $("#caixa_nome3").val();
+                var data_capturada = $("#caixa_data3").val();
+                var cargo_capturado = $("#caixa_cargo3").val();
+
+                $.ajax({
+                    url: "inserir.php",
+                    method: "POST",
+                    data: {nome_pessoa: nome_capturado,
+                        data_nascimento: data_capturada,
+                        cargo_pessoa: cargo_capturado
+                        },
+                    success: function(resposta){
+                        alert(resposta);
+                        $("#conteudo4").load("consultar.php");
+                    },
+                    error: function(){
+                        alert("Arquivo inválido!");
+                    }
+                });
+
+             });
+
+
+
+        });
+    </script>
+
+
+
+</body>
+</html>

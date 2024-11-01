@@ -1,0 +1,100 @@
+body{
+    min-height: 2000px;
+    margin: 50px;
+}
+
+#divUm{
+    height: 100px;
+    width: 100px;
+    background-color: cornflowerblue;
+    margin: 30px;
+}
+#divDois{
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 30px;
+}
+
+.caixas{
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+}
+
+#divTres{
+    background-color: purple;
+}
+#divQuatro{
+    background-color: darkturquoise;
+    width: 500px !important;
+}
+#divCinco{
+    background-color: burlywood;
+    width: 500px !important;
+}
+#divSeis{
+    background-color: chocolate;
+    width: 500px !important;
+}
+
+.cartoes{
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.cartoes:hover{
+    background-color: cornflowerblue;
+    transform: scale(1.2);
+}
+
+.cartao_pessoa{
+    width: 300px;
+    height: 90px;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 1s;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cartao_pessoa:hover{
+    background-color: greenyellow;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#conteudo5{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#escurecer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formulario{
+    background-color: wheat;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+}
